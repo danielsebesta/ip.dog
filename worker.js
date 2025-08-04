@@ -29,6 +29,10 @@ export default {
 async function fetch(request, env) {
   const {pathname} = new URL(request.url)
 
+  console.log('Country:', request.cf?.country)
+  console.log('Accept-Language:', request.headers.get('accept-language'))
+  
+  
   let ip
   if (env.isDev) {
     ip = generateRandomIpv4OrIpv6Address()
