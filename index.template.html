@@ -92,19 +92,19 @@ textarea {
 <div class="container">
   <div class="ip">
     <h1>{{IP}}</h1>
-    <button>{{LINE1}}</button>
+    <button>Klikni kamkoliv pro zkopírování</button>
   </div>
 
   <div class="notice">
-    <p>{{LINE3}}
+    <p>ip.smht.eu je nejrychlejší cesta jak získat Vaši IP adresu bezpečně. 🐶
     <ul>
-      <li>{{LINE4}}
-      <li>{{LINE5}}
-      <li>{{LINE6}}
-      <li>{{LINE7}}
+      <li>Extra krátká doména.
+      <li>Celá stránka je kopírovací tlačítko, anebo můžete zmáčknout jakoukoliv klávesu, abyste nemuseli pohnout prstem/myší.
+      <li>Je to dynamická stránka s rychlostí statické, která je díky Cloudflare Workers distribuována blízko Vás kdekoli na světě.
+      <li>Celá stránka se vejde do jednoho paketu TCP (≤ 1460 bajtů), aby se zabránilo obousměrnému zpoždění.
     </ul>
 
-    <p>{{LINE9}}
+    <p>Vytvořil <a href="https://dieulot.fr/">Alexandre Dieulot</a>. <a href="https://github.com/dieulot/ip.dog">Zdrojový kód</a> je dostupný.
   </div>
 </div>
 
@@ -121,7 +121,7 @@ function listener(event) {
   copyElement.setSelectionRange(0, copyElement.value.length);
   document.execCommand('copy');
 
-  document.querySelector('button').innerHTML = '{{LINE2}}';
+  document.querySelector('button').innerHTML = 'Zkopírováno!';
 }
 
 document.body.addEventListener('click', listener);
