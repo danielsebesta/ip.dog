@@ -5,6 +5,7 @@ const translations = {
   'en': (await import('./translations/en.txt')).default,
   'fr': (await import('./translations/fr.txt')).default,
   'hi': (await import('./translations/hi.txt')).default,
+  'cs': (await import('./translations/cs.txt')).default,
 }
 // The above cannot put in a loop because Wrangler (2.11) chokes on imports with dynamic names.
 
